@@ -1,0 +1,133 @@
+
+<filter>
+	<rule>
+		<id></id>
+		<tracker>1652920490</tracker>
+		<type>pass</type>
+		<interface>wan</interface>
+		<ipprotocol>inet</ipprotocol>
+		<tag></tag>
+		<tagged></tagged>
+		<max></max>
+		<max-src-nodes></max-src-nodes>
+		<max-src-conn></max-src-conn>
+		<max-src-states></max-src-states>
+		<statetimeout></statetimeout>
+		<statetype><![CDATA[keep state]]></statetype>
+		<os></os>
+		<protocol>tcp</protocol>
+		<source>
+			<any></any>
+		</source>
+		<destination>
+			<any></any>
+			<port>9000-9100</port>
+		</destination>
+		<log></log>
+		<descr><![CDATA[Libera&ccedil;&atilde;o das Portas Importantes]]></descr>
+		<updated>
+			<time>1652920490</time>
+			<username><![CDATA[admin@10.10.2.154 (Local Database)]]></username>
+		</updated>
+		<created>
+			<time>1652920490</time>
+			<username><![CDATA[admin@10.10.2.154 (Local Database)]]></username>
+		</created>
+	</rule>
+	<rule>
+		<id></id>
+		<tracker>1652920981</tracker>
+		<type>block</type>
+		<interface>lan</interface>
+		<ipprotocol>inet</ipprotocol>
+		<tag></tag>
+		<tagged></tagged>
+		<max></max>
+		<max-src-nodes></max-src-nodes>
+		<max-src-conn></max-src-conn>
+		<max-src-states></max-src-states>
+		<statetimeout></statetimeout>
+		<statetype><![CDATA[keep state]]></statetype>
+		<os></os>
+		<protocol>tcp</protocol>
+		<source>
+			<address>Gerencia</address>
+			<not></not>
+		</source>
+		<destination>
+			<address>Whatsapp</address>
+		</destination>
+		<descr><![CDATA[Bloqueio Whatsapp Hor&aacute;rio Comercial]]></descr>
+		<sched>Comercial</sched>
+		<created>
+			<time>1652920981</time>
+			<username><![CDATA[admin@10.10.2.154 (Local Database)]]></username>
+		</created>
+		<updated>
+			<time>1652921029</time>
+			<username><![CDATA[admin@10.10.2.154 (Local Database)]]></username>
+		</updated>
+	</rule>
+	<rule>
+		<id></id>
+		<tracker>1652920643</tracker>
+		<type>reject</type>
+		<interface>lan</interface>
+		<ipprotocol>inet</ipprotocol>
+		<tag></tag>
+		<tagged></tagged>
+		<max></max>
+		<max-src-nodes></max-src-nodes>
+		<max-src-conn></max-src-conn>
+		<max-src-states></max-src-states>
+		<statetimeout></statetimeout>
+		<statetype><![CDATA[keep state]]></statetype>
+		<os></os>
+		<protocol>tcp</protocol>
+		<source>
+			<address>Gerencia</address>
+			<not></not>
+		</source>
+		<destination>
+			<address>FacebookNetwork</address>
+		</destination>
+		<descr></descr>
+		<updated>
+			<time>1652920643</time>
+			<username><![CDATA[admin@10.10.2.154 (Local Database)]]></username>
+		</updated>
+		<created>
+			<time>1652920643</time>
+			<username><![CDATA[admin@10.10.2.154 (Local Database)]]></username>
+		</created>
+	</rule>
+	<rule>
+		<type>pass</type>
+		<ipprotocol>inet</ipprotocol>
+		<descr><![CDATA[Default allow LAN to any rule]]></descr>
+		<interface>lan</interface>
+		<tracker>0100000101</tracker>
+		<source>
+			<network>lan</network>
+		</source>
+		<destination>
+			<any></any>
+		</destination>
+	</rule>
+	<rule>
+		<type>pass</type>
+		<ipprotocol>inet6</ipprotocol>
+		<descr><![CDATA[Default allow LAN IPv6 to any rule]]></descr>
+		<interface>lan</interface>
+		<tracker>0100000102</tracker>
+		<source>
+			<network>lan</network>
+		</source>
+		<destination>
+			<any></any>
+		</destination>
+	</rule>
+	<separator>
+		<lan></lan>
+	</separator>
+</filter>
